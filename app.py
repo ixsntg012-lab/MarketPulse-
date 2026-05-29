@@ -1,4 +1,7 @@
 import streamlit as st
+import os
+os.environ['NEWS_API_KEY'] = st.secrets.get("NEWS_API_KEY", "")
+os.environ['GROQ_API_KEY'] = st.secrets.get("GROQ_API_KEY", "")
 import sys
 import plotly.graph_objects as go
 import plotly.express as px
